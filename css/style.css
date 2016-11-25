@@ -450,7 +450,7 @@ background:#FFFF;
 }
 
 .entry-header {margin-bottom: 4px;}
-.entry-title {line-height: 1;}
+.entry-title {line-height: 1; border-bottom: 3px solid #339966;padding: 5px 0 10px 0}
 .entry-title a {color: #303030;}
 
 .sticky .entry-title:before {

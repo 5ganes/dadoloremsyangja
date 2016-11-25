@@ -8,7 +8,7 @@
 						<? if($lan=='en') echo 'Connect With Us'; else echo 'फ़ेसबुकमा जोडिनुहोस';?>
 					</h4>
 					<div class="textwidget facebook">
-						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkrishighar%2F&tabs=timeline&width=290px&height=230px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="230px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkrishighar%2F&tabs=timeline&width=350px&height=230px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350px" height="230px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 					</div>
 				</div>
 				
@@ -22,12 +22,12 @@
 							<ul class="notice-list">
 								<li>
 									<a href="<? if($lan=='en') echo 'en/'?>audios">
-										<? if($lan=='en') echo 'Our Audios'; else echo 'हाम्रा अडियोहरु';?>
+										<img src="images/radio.png" />
 									</a>
 								</li>
 								<li>
 									<a href="<? if($lan=='en') echo 'en/'?>videos">
-										<? if($lan=='en') echo 'Our Videos'; else echo 'हाम्रा भिडिओहरु';?>
+										<img src="images/tv.png" />
 									</a>
 								</li>
 							</ul>

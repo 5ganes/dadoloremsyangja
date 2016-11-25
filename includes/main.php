@@ -1,8 +1,29 @@
 <style type="text/css">
   .slider-prev{background-image: url('images/slider-prev.png')}
-  .slider-next{background-image: url('images/slider-next.png')
+  .slider-next{background-image: url('images/slider-next.png')}
+  .single-view{padding:10px 13px;margin-bottom: 8px;}
+  .hot-news-title{font-weight: bold; float: left;width: 20%;font-size: 15px}
+  .hot-news-content{float: left;margin-top: 2px;width: 80%; font-size: 14px;}
+  .entry-content a{text-decoration: none;float: right;}
+  .entry-content a:hover{text-decoration: underline;}
 </style>
 <div id="content" class="cf">
+  
+  <article class="single-view post-77 page type-page status-publish hentry">
+    <div class="hto-news">
+      <?php $hot=$conn->fetchArray($groups->getById(HOT_NEWS));?>
+      <div class="hot-news-title"><? if($lan=='en') echo $hot['nameen']; else echo $hot['name'];?> : </div>
+      <div class="hot-news-content">
+        <a href="<?php if($lan=='en') echo 'en/'; echo $hot['urlname'];?>">
+          <marquee behavior="scroll" direction="direction" scrolldelay="3" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+            <?php if($lan=='en') echo $hot['shortcontentsen']; else echo $hot['shortcontents'];?>
+          </marquee>
+        </a>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </article>
+
   <div id="slider" class="slider-content">
     <div id="basic-slider" style="height: 327.958px; max-width: 480px; position: relative;">  
       <ul class="bjqs" style="height: 327.958px; width: 100%; display: block;">
@@ -33,10 +54,10 @@
     </header>
     <div class="entry-byline cf">
     </div>
-    <div class="entry-content cf" style="text-align: justify;">
+    <div class="entry-content cf" style="text-align: justify; line-height: 30px">
       <? if($lan=='en') echo $welcome['shortcontentsen']; else echo $welcome['shortcontents'];?>
       <br>
-      <a href="<?=$welcome['urlname'];?>"><em><strong>Read More</strong></em></a>
+      <a href="<?=$welcome['urlname'];?>"><strong>see more...</strong></a>
       </p>
     </div>
     <footer class="entry-footer cf">
@@ -51,25 +72,33 @@
 <div id="sidebar-right" class="sidebar cf">
   <div id="widgets-wrap-sidebar-right">
     
-    <div id="text-3" class="widget-sidebar frontier-widget widget_text">
+    <div id="notice_board_widget-2" class="widget-sidebar frontier-widget widget_notice_board_widget">
       <h4 class="widget-title">
-        <? if($lan=='en') echo 'Important Links'; else echo 'उपयोगी लिङ्क्स';?>
+        <? if($lan=='en') echo 'News'; else echo 'सूचना';?>
       </h4>
-      <div class="textwidget">
-        <ul>
-        <?php
-        $links=$groups->getByParentIdWithLimit(LINKS,6);
-        while($linksGet=$conn->fetchArray($links)){?>
-          <li>
-            <a href="<?=$linksGet['contents'];?>" title="<? if($lan=='en') echo $linksGet['nameen']; 
-            else echo $linksGet['name'];?>" target="_blank">
-              <? if($lan=='en') echo $linksGet['nameen']; else echo $linksGet['name'];?>
-            </a>
-          </li>
-        <?php }?>
+      <div class="msnb_notice scroll-up">
+        <ul class="notice-list">
+          <?php
+          $news=$groups->getByParentIdWithLimit(NEWS,3);
+          while($newsGet=$conn->fetchArray($news)){?>
+            <li>
+              <a href="<?=$newsGet['urlname'];?>">
+                <? if($lan=='en') echo $newsGet['nameen']; else echo $newsGet['name']?>
+              </a>
+            </li>
+          <?php }?>
         </ul>
-        <?php $linkUrl=$groups->getByIdResult(LINKS);?>
+        <?php $linkUrl=$groups->getByIdResult(NEWS);?>
         <a style="font-weight: bold;font-size: 15px;float: right;" href="<?=$linkUrl['urlname'];?>">see more...</a>
+      </div>
+    </div>
+
+    <div id="notice_board_widget-2" class="widget-sidebar frontier-widget widget_notice_board_widget">
+      <h4 class="widget-title">
+        <? if($lan=='en') echo 'Our Gallery'; else echo 'हाम्रो ग्यालरी';?>
+      </h4>
+      <div class="msnb_notice scroll-up">
+        <iframe src="wow/slideimage.php" style="width:260px;height:200px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
       </div>
     </div>
 
@@ -88,7 +117,7 @@
         <div class="textwidget">
         <ul>
           <?php
-          $download=$groups->getByParentIdWithLimit(PUBLICATION,6);
+          $download=$groups->getByParentIdWithLimit(PUBLICATION,3);
           while($downloadGet=$conn->fetchArray($download)){?>
             <li>
               <a href="<?=CMS_FILES_DIR.$downloadGet['contents']?>" target="_blank">
@@ -113,7 +142,7 @@
         <ul>
           <?php
           $kendra = new Sewakendra();
-          $list=$kendra->getSewaKendraWithLimit(5);
+          $list=$kendra->getSewaKendraWithLimit(3);
           while($row=$conn->fetchArray($list)){?>
             <li>
               <a href="sewakendra/<?=$row['urlname'];?>.html" target="_blank">

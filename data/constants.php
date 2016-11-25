@@ -39,6 +39,9 @@ define("VIDEO_GALLERY", 386);
 define("AUDIOS", 429);
 define("VIDEOS", 433);
 
+define("HOT_NEWS", 443);
+define("GALLERY", 444);
+
 ///////////////GENERAL CLIENT SIDE CONSTANTS///////////////////
 
 

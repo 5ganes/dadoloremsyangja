@@ -20,8 +20,10 @@
             <li><a href="cms.php?id=362&parentId=0&groupType=Other">Information Officer</a></li>
             <li><a href="sewakendra.php">Manage Sewakendra</li>
             <li><a href="bills.php">Manage Bills</a></li>
-            <li><a href="cms.php?parentId=429&groupType=Other&open">Manage Audios</a></li>
-            <li><a href="cms.php?id=433&parentId=0&groupType=Other">Manage Videos</a></li>
+            <li><a href="cms.php?parentId=<?=AUDIOS;?>&groupType=Other&open">Manage Audios</a></li>
+            <li><a href="cms.php?id=<?=VIDEOS;?>&parentId=0&groupType=Other">Manage Videos</a></li>
+            <li><a href="cms.php?id=<?=HOT_NEWS;?>&parentId=0&groupType=Other">Manage Hot News</a></li>
+            <li><a href="cms.php?id=<?=GALLERY;?>&parentId=0&groupType=Other">Manage Gallery</a></li>
             <li><a href="cms.php?groupType=Other">Manage Other</a></li>
     	</ul>
   	</li>
