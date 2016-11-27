@@ -40,7 +40,7 @@
 	      <div class="textwidget">
 	        <ul>
 	        <?php
-	        $links=$groups->getByParentIdWithLimit(LINKS,5);
+	        $links=$groups->getByParentIdWithLimit(LINKS,7);
 	        while($linksGet=$conn->fetchArray($links)){?>
 	          <li>
 	            <a href="<?=$linksGet['contents'];?>" title="<? if($lan=='en') echo $linksGet['nameen']; 

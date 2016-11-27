@@ -79,7 +79,7 @@
       <div class="msnb_notice scroll-up">
         <ul class="notice-list">
           <?php
-          $news=$groups->getByParentIdWithLimit(NEWS,3);
+          $news=$groups->getByParentIdWithLimit(NEWS,5);
           while($newsGet=$conn->fetchArray($news)){?>
             <li>
               <a href="<?=$newsGet['urlname'];?>">
@@ -93,18 +93,18 @@
       </div>
     </div>
 
+    <div id="text-6" class="widget-sidebar frontier-widget widget_text">
+      <div class="textwidget">
+        <a href="bills.php"><img src="images/Untitled.png"></a>
+      </div>
+    </div>
+
     <div id="notice_board_widget-2" class="widget-sidebar frontier-widget widget_notice_board_widget">
       <h4 class="widget-title">
         <? if($lan=='en') echo 'Our Gallery'; else echo 'हाम्रो ग्यालरी';?>
       </h4>
       <div class="msnb_notice scroll-up">
         <iframe src="wow/slideimage.php" style="width:260px;height:200px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
-      </div>
-    </div>
-
-    <div id="text-6" class="widget-sidebar frontier-widget widget_text">
-      <div class="textwidget">
-        <a href="bills.php"><img src="images/Untitled.png"></a>
       </div>
     </div>
     
