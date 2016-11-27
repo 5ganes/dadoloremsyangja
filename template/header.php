@@ -50,16 +50,18 @@
 			</div>
 			<div id="header-title">
 				<?php if($lan!='en'){?>
-					<h5>नेपाल सरकार</h5>
+					<h6>नेपाल सरकार</h6>
 					<h5>कृषि विकास मन्त्रालय</h5>
+					<h6>कृषि बिभाग</h6>
+					<h5>पश्चिमान्चल क्षेत्रीय कृषि निर्देशनालय</h5>
 					<h3>जिल्ला कृषि विकास कार्यालय, स्याङ्जा</h3>
-					<h6>स्याङ्जा, नेपाल</h6>
 				<? }
 				else{?>
-					<h5>Nepal Govvernment</h5>
+					<h5>Nepal Government</h5>
 					<h5>Agriculture Development Ministry</h5>
-					<h3>Soil Management Directorate</h3>
-					<h6>Syangja, Nepal</h6>
+					<h6>Department of Agriculture</h6>
+					<h5>Western Regional Agriculture Directorate</h5>
+					<h3>District Agriculture Development Office, Syangja</h3>
 				<? }?>
 			</div>
 			<div id="header-flag">
