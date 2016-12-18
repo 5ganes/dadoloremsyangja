@@ -163,4 +163,6 @@
 	#text-5, #text-8, #text-7{width: 100%}
 	.facebook iframe html body div{width: 100%}
 	#content{width: 100%}
+	.dynamic-content img{max-width: 100%; float:none; margin-bottom: 5px;}
+	#content{width: 100% !important}
 }

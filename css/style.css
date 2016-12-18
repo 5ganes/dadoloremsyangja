@@ -630,7 +630,7 @@ img[class*="attachment-"],
 .entry-content img,
 .comment-content img {
 	height: auto;
-	max-width: 100%;
+	max-width: 50%;
 }
 
 .wp-smiley {
@@ -1198,6 +1198,8 @@ img[class*="attachment-"],
 	color: #000;
 	font-weight: bold;
 }
+
+.dynamic-content img{max-width: 50%; margin: 4px 10px 5px 0;float: left;}
 
 @media print {
 	#nav-top,
