@@ -1,0 +1,2 @@
+[25-Nov-2016 14:05:19 UTC] PHP Warning:  mktime() expects parameter 6 to be long, string given in /home/dadosyangja/public_html/admin/cms.php on line 138
+[18-Dec-2016 14:43:21 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/dadosyangja/public_html/admin/ajaxListingPanel.php:4) in /home/dadosyangja/public_html/admin/init.php on line 2
